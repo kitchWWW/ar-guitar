@@ -6,9 +6,8 @@
 		<script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
 		<meta charset="utf-8" />
 		<meta property="og:title" content="Play an AR Guitar!">
-		<meta property="og:image" content="https://ar-guitar.com/titleimage.jpg">
+		<meta property="og:image" content="https://ar-guitar.com/res_img/titleimage.jpg">
 		<meta property="og:url" content="https://www.ar-guitar.com"/>
-
 		<title>AR-Guitar</title>
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -17,11 +16,9 @@
 	</head>
 	<body>
 		<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=1283592415171972&autoLogAppEvents=1"></script>
-
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=1283592415171972&autoLogAppEvents=1"></script>
 		<div class="headding">
-		made by <a href="http://www.brianellissound.com"target="_blank">Brian Ellis</a> &nbsp; &nbsp; <div class="fb-share-button" data-href="https://ar-guitar.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Far-guitar.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-
+			made by <a href="http://www.brianellissound.com"target="_blank">Brian Ellis</a> &nbsp; &nbsp; <div class="fb-share-button" data-href="https://ar-guitar.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Far-guitar.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 		</div>
 		<!-- 			AR Guitar<br/>
 		<button id="myButton">start recording</button> -->
@@ -30,11 +27,19 @@
 		<div id="myModal" class="modal">
 			<!-- Modal content -->
 			<div class="modal-content">
-				<span class="close">&times;</span>
 				<center>
-				<img src="logo.png" width="100%" alt="AR-Guitar logo">
+				<img src="res_img/logo.png" width="100%" alt="AR-Guitar logo">
 				<div class="subtitle">a "guitAR" if you will...</div>
+				<br>
+				choose one:
+				<br>
+				<br>
 				</center>
+				<img src="res_img/flying.png" onclick="chooseInsturment('flying')" width="30%" alt="rock guitar">
+				&nbsp; &nbsp;
+				<img src="res_img/acoustic.png" onclick="chooseInsturment('acoustic')" width="30%" alt="acoustic guitar">
+				&nbsp; &nbsp;
+				<img src="res_img/metal.png" onclick="chooseInsturment('metal')" width="30%" alt="metal guitar">
 				<br>
 				<ul>
 					<li>Stand back from your webcam</li>
@@ -45,6 +50,5 @@
 				<center><i>powered via <a href="https://ml5js.org/" target="_blank">ml5js</a> and made by <a href="http://www.brianellissound.com"target="_blank">Brian Ellis</a></i></center>
 			</div>
 		</div>
-		<script src="modal.js"></script>
 	</body>
 </html>

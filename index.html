@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+		<script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+		<meta charset="utf-8" />
+		<meta property="og:title" content="Play an AR Guitar!">
+		<meta property="og:image" content="https://ar-guitar.com/titleimage.jpg">
+		<meta property="og:url" content="https://www.ar-guitar.com"/>
+
+		<title>AR-Guitar</title>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.min.js"></script>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=1283592415171972&autoLogAppEvents=1"></script>
+
+		<div class="headding">
+		made by <a href="http://www.brianellissound.com"target="_blank">Brian Ellis</a> &nbsp; &nbsp; <div class="fb-share-button" data-href="https://ar-guitar.com" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Far-guitar.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+		</div>
+		<!-- 			AR Guitar<br/>
+		<button id="myButton">start recording</button> -->
+		<script src="sketch.js"></script>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<center>
+				<img src="logo.png" width="100%" alt="AR-Guitar logo">
+				<div class="subtitle">a "guitAR" if you will...</div>
+				</center>
+				<br>
+				<ul>
+					<li>Stand back from your webcam</li>
+					<li>Make your window large enough to see the whole video</li>
+					<li>Refresh after changing the window size</li>
+					<li>Close this popup and start jammin'!</li>
+				</ul>
+				<center><i>powered via <a href="https://ml5js.org/" target="_blank">ml5js</a> and made by <a href="http://www.brianellissound.com"target="_blank">Brian Ellis</a></i></center>
+			</div>
+		</div>
+		<script src="modal.js"></script>
+	</body>
+</html>

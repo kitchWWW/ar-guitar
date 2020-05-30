@@ -78,12 +78,12 @@ var acoustic_2u = new Pizzicato.Sound('res_audio/acoustic/cUp.wav', function() {
 var acoustic_3d = new Pizzicato.Sound('res_audio/acoustic/dDown.wav', function() {});
 var acoustic_3u = new Pizzicato.Sound('res_audio/acoustic/dUp.wav', function() {});
 
-var metal_1d = new Pizzicato.Sound('res_audio/flying/eDown.wav', function() {});
-var metal_1u = new Pizzicato.Sound('res_audio/flying/eUp.wav', function() {});
-var metal_2d = new Pizzicato.Sound('res_audio/flying/aDown.wav', function() {});
-var metal_2u = new Pizzicato.Sound('res_audio/flying/aUp.wav', function() {});
-var metal_3d = new Pizzicato.Sound('res_audio/flying/bDown.wav', function() {});
-var metal_3u = new Pizzicato.Sound('res_audio/flying/bUp.wav', function() {});
+var metal_1d = new Pizzicato.Sound('res_audio/metal/eDown.wav', function() {});
+var metal_1u = new Pizzicato.Sound('res_audio/metal/eUp.wav', function() {});
+var metal_2d = new Pizzicato.Sound('res_audio/metal/fDown.wav', function() {});
+var metal_2u = new Pizzicato.Sound('res_audio/metal/fUp.wav', function() {});
+var metal_3d = new Pizzicato.Sound('res_audio/metal/bDown.wav', function() {});
+var metal_3u = new Pizzicato.Sound('res_audio/metal/bUp.wav', function() {});
 
 
 function stopAll() {

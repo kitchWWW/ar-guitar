@@ -59,7 +59,7 @@ let skeleton;
 
 function setup() {
 	console.log(windowWidth);
-	var cnv = createCanvas(windowWidth, windowHeight-HEIGHT_OF_TOP_BAR);
+	var cnv = createCanvas(windowWidth, windowHeight - HEIGHT_OF_TOP_BAR);
 	video = createCapture(VIDEO);
 	video.hide();
 	poseNet = ml5.poseNet(video, modelLoaded);
@@ -198,12 +198,23 @@ lwy = 400;
 lwx = 400;
 
 function draw() {
+
+
 	background(255);
 	ogVidWidth = video.width;
 	ogVidHeight = video.height;
 	var porportionW = windowWidth / ogVidWidth
-	var porportionH = (windowHeight-HEIGHT_OF_TOP_BAR) / ogVidHeight
-	porportionToUse = Math.min(porportionW,porportionH)
+	var porportionH = (windowHeight - HEIGHT_OF_TOP_BAR) / ogVidHeight
+	porportionToUse = Math.min(porportionW, porportionH)
+
+	if (porportionToUse == porportionH) {  
+		translate(windowWidth - (windowWidth - ogVidWidth)/2, 0);
+		scale(-1.0, 1.0);
+	} else {
+		translate(windowWidth, 0);
+		scale(-1.0, 1.0);
+	}
+
 	scale(porportionToUse);
 	image(video, 0, 0);
 
@@ -220,7 +231,7 @@ function draw() {
 		}
 
 		lwx_raw = pose.leftWrist.x;
-		lwy_raw = pose.leftWrist.y - guitar_len*.1;
+		lwy_raw = pose.leftWrist.y - guitar_len * .1;
 		rwx = pose.rightWrist.x;
 		rwy = pose.rightWrist.y;
 		rhx = ((pose.rightHip.x - guitar_len * .05) * .1) + (rhx * .9);
@@ -232,7 +243,7 @@ function draw() {
 
 		// we want to change distances quickly, but guitar verticality should be smoothed.
 		var dist_lhFromHip = Math.sqrt(Math.pow((lwx_raw - rhx), 2) + Math.pow((lwy_raw - rhy), 2));
-		
+
 		var dist_rwFromHip = Math.sqrt(Math.pow((rwx - rhx), 2) + Math.pow((rwy - rhy), 2));
 		var dist_nFromHip = Math.sqrt(Math.pow((nx - rhx), 2) + Math.pow((ny - rhy), 2));
 
@@ -332,9 +343,9 @@ function draw() {
 
 
 window.onclick = function() {
-  let context = Pizzicato.context
-  let source = context.createBufferSource()
-  source.buffer = context.createBuffer(1, 1, 22050)
-  source.connect(context.destination)
-  source.start()
+	let context = Pizzicato.context
+	let source = context.createBufferSource()
+	source.buffer = context.createBuffer(1, 1, 22050)
+	source.connect(context.destination)
+	source.start()
 }

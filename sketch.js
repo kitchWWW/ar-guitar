@@ -329,3 +329,12 @@ function draw() {
 		}
 	}
 }
+
+
+window.onclick = function() {
+  let context = Pizzicato.context
+  let source = context.createBufferSource()
+  source.buffer = context.createBuffer(1, 1, 22050)
+  source.connect(context.destination)
+  source.start()
+}
